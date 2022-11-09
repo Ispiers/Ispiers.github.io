@@ -1,0 +1,213 @@
+
+:root{
+    --bg : url("./coupleImage/4_1.jpeg");
+    --bg2 : url("./coupleImage/4_2.jpeg");
+}
+*,body{
+    margin : 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-color: rgb(224, 214, 233);
+    overflow: hidden;
+}
+.container1, .container2{
+    position: absolute;
+    padding : 20px;
+    left : 50%;
+    top : 50%;
+    -webkit-transform: translate(-50% ,-50%);
+        -ms-transform: translate(-50% ,-50%);
+            transform: translate(-50% ,-50%);
+    border-radius: 10px;
+    background-color: rgba(205, 43, 226, 0.562);
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
+    -webkit-box-shadow: 0 0 16px rgb(230, 36, 255);
+            box-shadow: 0 0 16px rgb(230, 36, 255);
+}
+.container1{
+    width : 50%;
+    height : 60vh;
+}
+.container1 h1{
+    text-align: center;
+    text-transform: uppercase;
+    color : #fff;
+}
+.container1 img{
+    left : 25%;
+    position: absolute;
+    top : -30%;
+    width : 50%;
+    height : 58%;
+}
+.container1 .form{
+    margin-top: 20%;
+}
+.container1 .form input{
+    display: block;
+    padding : 5px;
+    border-radius: 5px;
+    width : 80%;
+    height : 30px;
+    margin  : 3% 10%;
+    border: none;
+    outline: none;
+}
+.container1 .form input[type="submit"]{
+    margin-top : 9%;
+    width : 50%;
+    background :rgb(6, 93, 255);
+    color : #fff;
+    -webkit-box-shadow: 0 0 10px rgb(6, 93, 255);
+            box-shadow: 0 0 10px rgb(6, 93, 255);
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+.container1 .form input[type="submit"]:hover{
+    background: rgb(54, 123, 250);
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+}
+
+.container2{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap : 2%;
+    -webkit-animation: apparition 1.2s;
+            animation: apparition 1.2s;
+}
+.container2 .value{
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    position: absolute;
+    font-weight: bold;
+    top : 40%;
+    left : 44%;
+    width : 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding : 15px 10px;
+    background-color: rgb(0, 110, 255);
+    color : #fff;
+    -webkit-box-shadow: 0 0 7px rgba(0,0,0,.4);
+            box-shadow: 0 0 7px rgba(0,0,0,.4);
+    z-index: 4;
+}
+.container2 .card{
+    position: relative;
+    width: 200px;
+    height : 250px;
+    background-position: center;
+    background-size: cover;
+}
+.container2 .card h1{
+    position: absolute;
+    bottom : 20px;
+    left : 10%;
+    color :rgb(241, 244, 247);
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+.container2 input{
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    position: absolute;
+    padding : 10px;
+    left : 40%;
+    bottom : -70px;
+    border: none;
+    background-color: rgb(0, 140, 255);
+    -webkit-box-shadow: 0 0 10px rgb(0, 140, 255);
+            box-shadow: 0 0 10px rgb(0, 140, 255);
+    color : #fff;
+    border-radius: 5px;
+}
+.hidde{
+    display: none;
+}
+
+.heart-left{
+    position: relative;
+    width : 100wh;
+    height : 100vh;
+    z-index: -1;
+}
+.fa-heart{
+    -webkit-perspective: 2000px;
+            perspective: 2000px;
+    position: absolute;
+    color : red;
+    -webkit-animation: heart1 6s linear infinite;
+            animation: heart1 6s linear infinite;
+}
+
+.hm{
+    background-image: var(--bg);
+}
+.fm{
+    background-image: var(--bg2);
+}
+
+@-webkit-keyframes heart1{
+    to{-webkit-transform: translateX(1800px);transform: translateX(1800px);
+}
+}
+
+@keyframes heart1{
+    to{-webkit-transform: translateX(1800px);transform: translateX(1800px);
+}
+}
+@-webkit-keyframes apparition {
+    from{
+        -webkit-transform: translate(-50% ,-30%);
+                transform: translate(-50% ,-30%);
+        opacity: 0;
+    }
+    to{
+        -webkit-transform: translate(-50% ,-50%);
+                transform: translate(-50% ,-50%);
+        opacity: 1;
+    }
+    
+}
+@keyframes apparition {
+    from{
+        -webkit-transform: translate(-50% ,-30%);
+                transform: translate(-50% ,-30%);
+        opacity: 0;
+    }
+    to{
+        -webkit-transform: translate(-50% ,-50%);
+                transform: translate(-50% ,-50%);
+        opacity: 1;
+    }
+    
+}
+
+@media (max-width : 950px){
+    .container1{
+        width : 80%;
+    }
+    .container1 .form{
+        margin-top: 30%;
+    }
+    .container1 img{
+        width : 50%;
+        height : 54%;
+    }
+}
+@media (max-width : 450px){
+    .container1 .form{
+        margin-top: 50%;
+    }
+}
