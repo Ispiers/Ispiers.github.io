@@ -47,7 +47,7 @@ function heartLeft(){
         hrt.remove()
     },5000)
 }
-//setInterval(heartLeft,100)
+setInterval(heartLeft,100)
 
 test.addEventListener('click', (e)=>{
     loop()
